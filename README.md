@@ -1,2 +1,2 @@
 # macro_functions
-just some small macro functions
+just some small but useful macro functions
