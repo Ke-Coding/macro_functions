@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define scanf_integer(x) {  register char tpc = getchar(), sgn = 1;\
+#define scan_integer(x)  {  register char tpc = getchar(), sgn = 1;\
                             for (x=0; tpc<'0' || tpc>'9'; tpc=getchar())\
                             	if (tpc=='-')\
                                 	sgn = -1;\
@@ -12,7 +12,7 @@ int main()
 {
     int num;                           // The type can also be unsigned, long long, etc.
 
-    scanf_integer(num)                 // This function can be faster than scanf.
+    scan_integer(num)                  // This function can be faster than scanf.
     printf("num == %d\n", num);
 
     return 0;
