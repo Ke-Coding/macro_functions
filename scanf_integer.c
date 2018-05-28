@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define scanf_integer(x) {  register char tpc=getchar(), sgn=1;\
+#define scanf_integer(x) {  register char tpc = getchar(), sgn = 1;\
                             for (x=0; tpc<'0' || tpc>'9'; tpc=getchar())\
                             	if (tpc=='-')\
                                 	sgn = -1;\
