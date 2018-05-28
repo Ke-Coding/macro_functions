@@ -2,9 +2,9 @@
 #include <string.h>
 #define MAX_LEN 100
 #define split_scanf(s,w,n)   scanf("%*[^a-zA-Z]");\
-                                n=0;\
-                                while(scanf("%[^ ,.?!\n]%*[ ,.?!]",s)==1)\
-                                    strcpy(w[n++],s)
+                             n=0;\
+                             while(scanf("%[^ ,.?!\n]%*[ ,.?!]",s)==1)\
+                                 strcpy(w[n++],s)
 
 int main()
 {
