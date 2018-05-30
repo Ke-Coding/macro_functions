@@ -3,7 +3,7 @@
 #define MAX_N 10000
 #define gener_prime_table(prime, n)     do{                                                 \
                                             prime[0] = prime[1] = 1;                        \
-                                            int i,j,sq;                                     \
+                                            int i, j, sq;                                   \
                                             for (i=2,sq=(int)(sqrt(n)+1); i<=sq; i++)       \
                                                 if (!prime[i])                              \
                                                     for (j=i*i; j<=n; j+=i) prime[j]=1;     \
