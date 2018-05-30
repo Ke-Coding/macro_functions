@@ -7,7 +7,7 @@
                                             for (i=2,sq=(int)(sqrt(n)+1); i<=sq; i++)       \
                                                 if (!prime[i])                              \
                                                     for (j=i*i; j<=n; j+=i) prime[j]=1;     \
-                                            }while(0)
+                                        }while(0)
 
 int main()
 {
