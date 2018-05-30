@@ -12,7 +12,7 @@ int main()
 {
     int i, numOfWords = 0;
     char sentence[MAX_LEN] = "";
-    char words[MAX_LEN][MAX_LEN] = {""};		// for storing the words of the sentence.
+    char words[MAX_LEN][MAX_LEN] = {""};		  // for storing the words of the sentence.
 
 
     split_scanf(sentence, words, numOfWords);
