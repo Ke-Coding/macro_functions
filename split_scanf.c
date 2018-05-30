@@ -6,7 +6,7 @@
                                   cnt=0;                                         \
                                   while(scanf("%[^ ,.?!\n]%*[ ,.?!]",s)==1)      \
                                       strcpy(w[cnt++],s);                        \
-                              while(0)
+                              }while(0)
 
 int main()
 {
