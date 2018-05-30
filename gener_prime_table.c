@@ -16,8 +16,8 @@ int main()
 
     if ( upBound > 1 && upBound < MAX_N )
     {
-        gener_prime_table(primeArray, upBound);	// Generate the prime number on a closed interval
-                                                //   by using the sieve of Eratosthenes.
+        gener_prime_table(primeArray, upBound);	    // Generate the prime number on a closed interval
+//                                                     by using the sieve of Eratosthenes.
         for (i=0; i<=upBound; i++)
         {
             if (!primeArray[i])
