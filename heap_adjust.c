@@ -3,19 +3,19 @@
 #define swap(a,b) do{int t=a;a=b;b=t;}while(0)
 #define M 10000
 
-#define adjustHeap(heap, node, size)                              \
-	do{                                                             \
-		int parent=node, max_child, adjust = heap[parent];            \
-		for( ; parent*2+1<=size-1; parent=max_child)                  \
-		{                                                             \
-			max_child = 2*parent+1;                                     \
-			if (max_child<size-1 && heap[max_child]<heap[max_child+1])  \
-				max_child ++;                                             \
-			if (adjust>=heap[max_child])                                \
-				break;                                                    \
-			heap[parent] = heap[max_child];                             \
-		}                                                             \
-		heap[parent] = adjust;                                        \
+#define adjustHeap(heap, node, size)                                                  \
+	do{                                                                           \
+		int parent=node, max_child, adjust = heap[parent];                    \
+		for( ; parent*2+1<=size-1; parent=max_child)                          \
+		{                                                                     \
+			max_child = 2*parent+1;                                       \
+			if (max_child<size-1 && heap[max_child]<heap[max_child+1])    \
+				max_child ++;                                         \
+			if (adjust>=heap[max_child])                                  \
+				break;                                                \
+			heap[parent] = heap[max_child];                               \
+		}                                                                     \
+		heap[parent] = adjust;                                                \
 	}while(0)
 
 
