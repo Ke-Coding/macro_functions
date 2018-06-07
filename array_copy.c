@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #define MAX_LEN 100
-#define array_copy(dest, src, n) {      \          // The type of the array can also be int, long, etc.
+#define array_copy(dest, src, n) do{    \          // The type of the array can also be int, long, etc.
             char*t = dest, *f = src;    \
             int m = (n+7)/8 ;           \
             switch (n%8) {              \
@@ -16,7 +16,7 @@
                 case 1: *t++ = *f++;    \
                 } while (--m>0);        \
             }                           \
-        }
+        }while(0)
 
 int main()
 {
@@ -27,7 +27,7 @@ int main()
     fgets(src, MAX_LEN-1, stdin);
     len = strlen(src);
 
-    array_copy(dest, src, len)
+    array_copy(dest, src, len);
 
     puts(dest);
 }
