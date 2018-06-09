@@ -11,7 +11,7 @@
 
 int main()
 {
-    int primeArray[MAX_N], upBound, i;
+    int primeArray[MAX_N] = {0}, upBound, i;
     scanf("%d",&upBound);
 
     if ( upBound > 1 && upBound < MAX_N )
