@@ -38,12 +38,12 @@ void mergeSort(int*a, int n)
 {
     if(n<=1)
         return;
-	if(n==2)
+    if(n==2)
     {
         if(a[0]>a[1])
             swap(a[0], a[1]);
         return;
-	}
+    }
     int mid = n/2;
     mergeSort(a, mid);
     mergeSort(a+mid, n-mid);
