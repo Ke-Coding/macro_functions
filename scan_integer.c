@@ -1,13 +1,13 @@
 #include <stdio.h>
-#define scan_integer(x) do{
-                            register char tempc = getchar(), sgn = 1;          \
+#define scan_integer(x) do {
+                            register char tempc = getchar(), sgn = 1;              \
                             for (x=0; tempc<'0' || tempc>'9'; tempc=getchar())     \
-                                if (tempc=='-')                                \
-                                    sgn = -1;                                \
+                                if (tempc=='-')                                    \
+                                    sgn = -1;                                      \
                             for (; tempc>='0' && tempc<='9'; tempc = getchar())    \
-                                x = (x<<1)+(x<<3)+tempc-'0';                   \
-                            x *= sgn;                                        \
-                        }while(0)
+                                x = (x<<1)+(x<<3)+tempc-'0';                       \
+                            x *= sgn;                                              \
+                        } while(0)
 
 int main()
 {
