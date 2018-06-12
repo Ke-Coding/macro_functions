@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define MAX_LEN 100
+#define MAX_LEN 300
 #define split_scanf(s,w,cnt)  do{                                                \
                                   scanf("%*[^a-zA-Z]");                          \
                                   cnt=0;                                         \
