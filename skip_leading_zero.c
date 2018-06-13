@@ -1,11 +1,13 @@
 #include <stdio.h>
-#define MAX_LEN 200
-#define skip_leading_zero() do { scanf("%*[^1-9]") } while(0)
+#define skip_leading_zero(num)  do {                     \
+                                   scanf("%*[^1-9]");    \
+                                   scanf("%d", &num);    \
+                                } while(0)
 int main()
 {
-    char num[MAX_LEN] = "" ;
+    int num ;
 
-    skip_leading_zero();
+    skip_leading_zero(num);
 
-    puts(num);
+    printf("%d", num);
 }
