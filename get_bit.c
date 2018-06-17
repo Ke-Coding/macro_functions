@@ -1,12 +1,12 @@
 #include <stdio.h>
-#define get_bit(num, a) do {                                           \
-                            unsigned mask = 0x80000000;                \
-	                    int cnt, bits = sizeof(num)*8;             \
-	                    for (cnt=0; cnt<bits ; cnt++)              \
-	                    {                                          \
-		                a[cnt] = !!(mask>>cnt & num) +'0';     \
-	                    }                                          \
-	                    a[cnt] = 0;                                \
+#define get_bit(num, a) do {                                                          \
+	                    int cnt, bits = sizeof(num)*8;                            \
+			    unsigned long long msk7=(unsigned long long)1<<(bs7-1);   \
+	                    for (cnt=0; cnt<bits ; cnt++)                             \
+	                    {                                                         \
+		                a[cnt] = !!(mask>>cnt & num) +'0';                    \
+	                    }                                                         \
+	                    a[cnt] = 0;                                               \
 	                } while (0)
 
 int main()
