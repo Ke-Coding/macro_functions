@@ -1,6 +1,7 @@
 #include <stdio.h>
+#define BITS_OF_BYTE 8
 #define get_bit(num, a) do {                                                          \
-	                    int cnt, bits = sizeof(num)*8;                            \
+	                    int cnt, bits = sizeof(num)*BITS_OF_BYTE;                 \
 			    unsigned long long mask=(unsigned long long)1<<(bits-1);  \
 	                    for (cnt=0; cnt<bits ; cnt++)                             \
 	                    {                                                         \
