@@ -4,7 +4,7 @@
 #define M 10000
 
 #define adjustHeap(heap, node, size)                                                  \
-	do{                                                                           \
+	do {                                                                           \
 		int parent=node, max_child, adjust = heap[parent];                    \
 		for( ; parent*2+1<=size-1; parent=max_child)                          \
 		{                                                                     \
@@ -16,13 +16,13 @@
 			heap[parent] = heap[max_child];                               \
 		}                                                                     \
 		heap[parent] = adjust;                                                \
-	}while(0)
+	} while(0)
 
 
 
 int main()
 {
-  int h[M];
+        int h[M];
 	int n, i, size, parent, max_child;
 	scanf("%d",&n);
 
