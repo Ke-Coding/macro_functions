@@ -3,11 +3,14 @@
 #define get_bit(num, a) do {                                                          \
 	                    int cnt, bits = sizeof(num)*BITS_OF_BYTE;                 \
 			    unsigned long long mask=(unsigned long long)1<<(bits-1);  \
-	                    for (cnt=0; cnt<bits ; cnt++)                             \
+			    int cnt = 0;                                              \
+	                    for (; cnt<bits && !(mask&num); cnt++, mask>>=1)          \
+			    int cnt0 = cnt;                                           \
+	                    for (; cnt<bits; cnt++, mask>>=1)                         \
 	                    {                                                         \
-		                a[cnt] = !!(mask>>cnt & num) +'0';                    \
+		                a[cnt-cnt0] = !!(mask>>cnt & num) +'0';               \
 	                    }                                                         \
-	                    a[cnt] = 0;                                               \
+	                    a[cnt-cnt0] = 0;                                          \
 	                } while (0)
 
 int main()
