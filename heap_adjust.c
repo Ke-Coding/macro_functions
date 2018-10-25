@@ -3,7 +3,7 @@
 #define swap(a,b) do{int t=a;a=b;b=t;}while(0)
 #define M 10000
 
-#define adjustHeap(heap, node, size)                                                  \
+#define adjustHeap(heap, node, size)                                                 \
 	do {                                                                          \
 		int parent=node, max_child, adjust = heap[parent];                    \
 		for( ; parent*2+1<=size-1; parent=max_child)                          \
